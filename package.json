@@ -1,0 +1,23 @@
+{
+  "name": "one-bank",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OneBank 银行基座平台（qiankun 微前端）",
+  "packageManager": "pnpm@12.5.1",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev:main": "pnpm --filter @one-bank/main dev",
+    "dev:market": "pnpm --filter @one-bank/market dev",
+    "dev": "run-p dev:market dev:main",
+    "build:main": "pnpm --filter @one-bank/main build",
+    "build:market": "pnpm --filter @one-bank/market build",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "npm-run-all2": "^6.2.6",
+    "typescript": "^5.5.4"
+  }
+}

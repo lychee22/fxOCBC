@@ -1,0 +1,56 @@
+/* 基座样式（shell- 前缀，避免被子应用覆盖） */
+* { box-sizing: border-box; }
+
+body { margin: 0; font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+
+.shell { display: flex; flex-direction: column; height: 100vh; }
+.shell-header {
+  display: flex; justify-content: space-between; align-items: center;
+  height: 48px; padding: 0 16px; background: #0b2545; color: #fff;
+}
+.shell-logo { font-weight: 700; letter-spacing: 1px; }
+.shell-user { font-size: 13px; display: flex; align-items: center; gap: 8px; }
+.shell-btn {
+  border: 1px solid rgba(255,255,255,.4); background: transparent; color: #fff;
+  border-radius: 4px; padding: 2px 10px; cursor: pointer;
+}
+.shell-btn:hover { background: rgba(255,255,255,.1); }
+
+.shell-body { display: flex; flex: 1; min-height: 0; }
+.shell-sidemenu {
+  width: 150px; border-right: 1px solid #e3e8ef; background: #f7f9fc;
+  display: flex; flex-direction: column; padding-top: 8px;
+}
+.shell-sidemenu a {
+  padding: 10px 16px; color: #40506b; text-decoration: none; font-size: 14px;
+}
+.shell-sidemenu a:hover { background: #eef2f8; }
+.shell-sidemenu a.active { color: #0f6bff; font-weight: 600; background: #e8f0ff; }
+
+.shell-content { flex: 1; padding: 16px; overflow: auto; position: relative; }
+.subapp-loading { color: #40506b; font-size: 14px; }
+
+.shell-home h2 { margin-top: 0; }
+.shell-home ul { color: #556; line-height: 1.8; }
+
+.login-page { display: flex; align-items: center; justify-content: center; height: 100vh; background: #f2f5fa; }
+.login-card {
+  width: 320px; background: #fff; border-radius: 10px; padding: 28px;
+  box-shadow: 0 6px 24px rgba(16,42,88,.08); display: flex; flex-direction: column; gap: 14px;
+}
+.login-card h1 { font-size: 20px; margin: 0; text-align: center; color: #0b2545; }
+.login-hint { margin: 0; font-size: 12px; color: #98a6bd; text-align: center; }
+.login-card input {
+  padding: 8px 10px; border: 1px solid #d6dee9; border-radius: 6px; font-size: 14px;
+}
+.login-card button {
+  padding: 9px 0; border: none; border-radius: 6px; background: #0f6bff; color: #fff;
+  font-size: 15px; cursor: pointer;
+}
+.login-card button:hover { background: #0a56d0; }
+
+.shell-error { padding: 40px; text-align: center; color: #c0392b; }
+.shell-error button {
+  margin-top: 12px; padding: 6px 18px; border: 1px solid #c0392b; border-radius: 6px;
+  background: transparent; color: #c0392b; cursor: pointer;
+}

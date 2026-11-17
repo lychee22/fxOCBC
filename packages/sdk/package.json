@@ -1,0 +1,14 @@
+{
+  "name": "@one-bank/sdk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OneBank 基座 SDK：接入契约类型、全局状态/事件总线、公共工具",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
